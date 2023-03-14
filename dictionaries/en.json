@@ -1,0 +1,25 @@
+{
+  "home": "Home",
+  "our-serves": "Our Serves",
+  "industries": "Industries",
+  "fqa": "FQA",
+  "services": "Services",
+  "usefully": "Usefully",
+  "client": "Client",
+  "mr": "Mohamed Rezk",
+  "about-us": "About Us",
+  "our-industries": "Our Industries",
+  "our-client": "Our Client",
+  "messages": "Messages",
+  "header-title": {
+    "admin": "About Us",
+    "our-industries": "Our Industries",
+    "our-client": "Our Client"
+  },
+  "text-lang-en": "Text In English",
+  "title-lang-en": "Title In English",
+  "text-lang-ar": "Text In Arabic",
+  "title-lang-ar": "Title In Arabic",
+  "submit": "Submit",
+  "add": "Add"
+}

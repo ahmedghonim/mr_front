@@ -1,0 +1,25 @@
+{
+  "home": "الرئيسة",
+  "our-serves": "خدماتنا",
+  "industries": "Industries",
+  "fqa": "الاسئلة الشائعة",
+  "services": "خدمات",
+  "usefully": "الامستفيدين",
+  "client": "عملاء",
+  "mr": "محمد رزق",
+  "about-us": "معلومات عنا",
+  "our-industries": "صفقاتنا",
+  "our-client": "العملاء",
+  "messages": "رسائل",
+  "header-title": {
+    "admin": "معلومات عنا",
+    "our-industries": "صفقاتنا",
+    "our-client": "العملاء"
+  },
+  "text-lang-en": "النص باللغة الإنجليزية",
+  "title-lang-en": "العنوان باللغة الإنجليزية",
+  "text-lang-ar": "النص باللغة العربية",
+  "title-lang-ar": "العنوان باللغة العربية",
+  "submit": "حفظ",
+  "add": "اضافة"
+}
