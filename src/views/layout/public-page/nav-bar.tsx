@@ -1,12 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "@svg/logo.svg";
 import TextLogo from "@svg/text-logo.svg";
 import clsx from "clsx";
 import useTranslation from "next-translate/useTranslation";
 import { Button } from "@ui/atom";
 import { useRouter } from "next/router";
-import { object } from "yup";
+
 function NavBar() {
   const { t, lang } = useTranslation("pages-title");
   const { asPath, pathname } = useRouter();
@@ -23,8 +22,7 @@ function NavBar() {
   return (
     <nav className="flex justify-between my-14 mx-[120px] items-center">
       <div className="flex flex-col justify-start items-center gap-2">
-        <Logo />
-        <TextLogo />
+        <TextLogo width="200" />
       </div>
       <div className="flex gap-20">
         {navBar.map(({ link, name }) => (
