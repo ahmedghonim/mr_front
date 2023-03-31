@@ -8,8 +8,8 @@ import { Button } from "@ui/atom";
 import { useRouter } from "next/router";
 import { object } from "yup";
 function NavBar() {
-  const { t } = useTranslation("pages-title");
-  const { asPath } = useRouter();
+  const { t, lang } = useTranslation("pages-title");
+  const { asPath, pathname } = useRouter();
 
   const navBar = [
     { name: "home", link: "/" },
@@ -46,15 +46,20 @@ function NavBar() {
           </Link>
         ))}
       </div>
-      <Button
-        style="secondary"
-        rounded="full"
-        size="sm"
-        font="bold"
-        className="!h-fit"
-      >
-        {t("contact")}
-      </Button>
+      <div className="flex items-center gap-3">
+        <Button
+          style="secondary"
+          rounded="full"
+          size="sm"
+          font="bold"
+          className="!h-fit"
+        >
+          {t("contact")}
+        </Button>
+        <Link href={pathname} locale={lang === "ar" ? "en" : "ar"}>
+          {lang === "ar" ? "EN" : "AR"}
+        </Link>
+      </div>
     </nav>
   );
 }
