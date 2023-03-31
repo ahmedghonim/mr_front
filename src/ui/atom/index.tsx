@@ -2,7 +2,7 @@ import Button from "./button";
 import LinkButton from "./button/link-button";
 import Input from "./input";
 import Text from "./text";
-import QuillInput from "./quill-input";
+import QuillInput from "./text-editor";
 import Card from "./card";
 import CheckBox from "./check-box";
 

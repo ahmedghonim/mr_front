@@ -11,7 +11,7 @@ interface QuillInputProps extends ReactQuillProps {
   label?: string;
 }
 
-export default function QuillInput({
+export default function TextEditor({
   isForm = true,
   name = "",
   label,
