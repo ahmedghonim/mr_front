@@ -1,4 +1,4 @@
-import LandingLayout from "@views/layout/landing-page";
+import PublicLayout from "@views/layout/public-page";
 import { useRouter } from "next/router";
 import React from "react";
 import { ToastContainer } from "react-toastify";
@@ -30,10 +30,10 @@ function LayoutProvider({ children }: Props): JSX.Element {
       <Toast />
     </>
   ) : (
-    <LandingLayout>
+    <PublicLayout>
       {children}
       <Toast />
-    </LandingLayout>
+    </PublicLayout>
   );
 }
 
