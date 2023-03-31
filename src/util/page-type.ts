@@ -1,7 +1,7 @@
 import { Locale } from "@i18n";
 
 export interface ParamsProps {
-  params: { lang: Locale };
+ 
 }
 
 export interface Children {

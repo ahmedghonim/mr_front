@@ -8,8 +8,8 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#0261E0",
-          "base-100": "#ffffff",
+          primary: "#E7BB4C",
+          "base-100": "#FFFFFF",
         },
       },
     ],
@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: "#0261E0",
+          100: "#E7BB4C",
         },
         secondary: {},
 
@@ -26,6 +26,7 @@ module.exports = {
         light: {},
         dark: {
           100: "#181818",
+          200: "#1D1D1D",
         },
       },
     },

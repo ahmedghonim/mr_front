@@ -1,41 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "@i18n": [
-        "./i18n-config.ts"
-      ],
-      "@redux": [
-        "./app/redux"
-      ],
-      "@get-dictionary": [
-        "./get-dictionary.ts"
-      ],
-      "@i18n-config": [
-        "./i18n-config.ts"
-      ],
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@util/*": [
-        "./util/*"
-      ],
-      "@svg/*": [
-        "./assets/svg/*"
-      ],
-      "@images/*": [
-        "./assets/image/*"
-      ],
-      "@ui/*": [
-        "./app/[lang]/ui/*"
-      ],
-      "@pages-components/*": [
-        "./app/[lang]/components/*"
-      ],
-    },
     "target": "es5",
     "lib": [
       "dom",
@@ -54,18 +18,38 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "baseUrl": "./src",
+    "paths": {
+      "@redux": [
+        "./redux"
+      ],
+      "@styles/*": [
+        "./styles/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@util/*": [
+        "./util/*"
+      ],
+      "@svg/*": [
+        "./assets/svg/*"
+      ],
+      "@image/*": [
+        "./assets/image/*"
+      ],
+      "@ui/*": [
+        "./ui/*"
+      ],
+      "@views/*": [
+        "./views/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "next.config.js",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
