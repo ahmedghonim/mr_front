@@ -1,5 +1,3 @@
- 
-import { DictionaryType } from "../../../../../get-dictionary";
 import { useSelectedLayoutSegments } from "next/navigation";
 import React from "react";
 
