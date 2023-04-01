@@ -35,7 +35,7 @@ function ServesView({ revers, src, title, desc }: ServesViewProps) {
         )}
       />
 
-      <div className="flex flex-col md:items-start gap-4  w-full">
+      <div className="flex flex-col md:items-start gap-4 w-full">
         <Text
           as="h2"
           size="heading"

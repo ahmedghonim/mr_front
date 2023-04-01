@@ -5,47 +5,19 @@ import clsx from "clsx";
 import useTranslation from "next-translate/useTranslation";
 import { Button } from "@ui/atom";
 import { useRouter } from "next/router";
-import LangIcon from "@svg/lang.svg";
-import ClosIcon from "@svg/x.svg";
 import MenuIcon from "@svg/menu.svg";
 import AboutIcon from "@svg/about-us.svg";
 import OurServesIcon from "@svg/our-serves.svg";
 import FQAIcon from "@svg/fqa.svg";
-
-function ChangeLang() {
-  const { pathname } = useRouter();
-  const { lang } = useTranslation("pages-title");
-  return (
-    <div className="flex items-center gap-2">
-      <LangIcon />
-      <Link
-        href={pathname}
-        locale="en"
-        className={clsx("text-black", {
-          "text-opacity-50": lang !== "en",
-        })}
-      >
-        {"EN"}
-      </Link>
-      <Link
-        href={pathname}
-        locale="ar"
-        className={clsx("text-black", {
-          "text-opacity-50": lang !== "ar",
-        })}
-      >
-        {"AR"}
-      </Link>
-    </div>
-  );
-}
-
+import ChangeLang from "../shared/change-lang";
+import VerticalBar from "../shared/vertical-bar";
+import LogoIcon from "@svg/logo.svg";
 function NavBar() {
-  const { t, lang } = useTranslation("pages-title");
-  const { asPath, pathname } = useRouter();
+  const { t } = useTranslation("pages-title");
+  const { asPath } = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   const navBar = [
-    { name: "home", link: "/", icon: AboutIcon },
+    { name: "home", link: "/", icon: LogoIcon },
     { name: "our-services", link: "/our-services", icon: OurServesIcon },
     { name: "about-us", link: "/about-us", icon: AboutIcon },
     { name: "fqa", link: "/fqa", icon: FQAIcon },
@@ -99,31 +71,7 @@ function NavBar() {
         <MenuIcon />
       </span>
 
-      {openMenu && (
-        <div className="top-0 left-0 h-screen w-full bg-[#FDFAE7] fixed">
-          <div className="flex justify-center mt-14">
-            <TextLogo />
-          </div>
-          <div className="mt-14 mx-9 flex flex-col gap-6">
-            {navBar.map(({ link, name, icon: Icon }) => (
-              <Link key={link} href={link}>
-                <span
-                  onClick={() => setOpenMenu(false)}
-                  className={clsx("flex gap-2 text-[#A7A7A7] text-lg h-fit", {
-                    "!text-primary-100": isActiveTab(link),
-                  })}
-                >
-                  <Icon className="fill-current" />
-                  {t(name)}
-                </span>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-14 mx-9">
-            <ChangeLang />
-          </div>
-        </div>
-      )}
+      {openMenu && <VerticalBar setOpenMenu={setOpenMenu} navBar={navBar} />}
     </nav>
   );
 }

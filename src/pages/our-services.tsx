@@ -27,7 +27,7 @@ function OurService() {
           revers={index % 2 !== 0}
         />
       ))}
-      <div className="rounded-3xl bg-[#F2E4BF] h-[282px] flex flex-col justify-center items-center gap-7">
+      <div className="rounded-3xl bg-[#F2E4BF] h-[282px] flex flex-col justify-center items-center gap-7 px-2">
         <Text as="p" size="md" className="text-black md:w-3/5">
           Our team of experienced and dedicated professionals are committed to
           delivering expert guidance tailored to your individual needs.{" "}
