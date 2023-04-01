@@ -2,7 +2,6 @@ import { LinkButton, Text } from "@ui/atom";
 import ServesView, { ServesViewProps } from "@views/public/our-serves";
 import servesData from "@views/public/our-serves/mockdata";
 import useTranslation from "next-translate/useTranslation";
-import Head from "next/head";
 import React from "react";
 
 function OurService() {
@@ -33,7 +32,7 @@ function OurService() {
           {t("contact")}
         </LinkButton>
       </div>
-    </>
+    </div>
   );
 }
 
