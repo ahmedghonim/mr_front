@@ -9,9 +9,10 @@ import MenuIcon from "@svg/menu.svg";
 import AboutIcon from "@svg/about-us.svg";
 import OurServesIcon from "@svg/our-serves.svg";
 import FQAIcon from "@svg/fqa.svg";
-import ChangeLang from "../shared/change-lang";
-import VerticalBar from "../shared/vertical-bar";
+
 import LogoIcon from "@svg/logo.svg";
+import ChangeLang from "@views/layout/shared/change-lang";
+import VerticalBar from "@views/layout/shared/vertical-bar";
 function NavBar() {
   const { t } = useTranslation("pages-title");
   const { asPath } = useRouter();
@@ -20,15 +21,18 @@ function NavBar() {
     { name: "home", link: "/", icon: LogoIcon },
     { name: "our-services", link: "/our-services", icon: OurServesIcon },
     { name: "about-us", link: "/about-us", icon: AboutIcon },
-    { name: "fqa", link: "/fqa", icon: FQAIcon },
+    { name: "contact-us", link: "/contact-us", icon: AboutIcon },
+    { name: "faq", link: "/faq", icon: FQAIcon },
   ];
 
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <nav className="flex justify-between md:my-14 md:mx-[120px] mx-7 my-7 items-center">
+    <nav className="flex justify-between md:my-14 md:mx-[120px] mx-7 my-7 items-center relative z-[6]">
       <div className="flex flex-col justify-start items-center gap-2">
-        <TextLogo />
+        <Link href="/">
+          <TextLogo />
+        </Link>
       </div>
 
       {/* ------ Hidden In Mobile ----- */}
@@ -38,16 +42,15 @@ function NavBar() {
             key={link}
             href={link}
             className={clsx(
-              "text-dark-100 text-lg h-fit   hover:duration-100 hover:font-bold duration-75 border-primary-100",
+              "relative text-dark-100 text-lg h-fit [&:hover>.line]:w-full",
               {
-                "font-bold": isActiveTab(link),
+                "font-bold [&>.line]:w-full": isActiveTab(link),
               }
             )}
           >
             {t(name)}
-            {isActiveTab(link) && (
-              <div className="h-1 w-full bg-primary-100 rounded-full mt-1" />
-            )}
+
+            <div className="absolute -bottom-3 left-0 h-1 w-0 bg-primary-100 rounded-full duration-300 line" />
           </Link>
         ))}
       </div>

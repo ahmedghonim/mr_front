@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
 @layer {
   #__next {
     @apply contents;
@@ -27,4 +30,8 @@
   li {
     list-style: disc;
   }
+}
+
+.contact-shadow {
+  box-shadow: 0px 0px 53.5284px 26.7642px rgba(0, 0, 0, 0.03);
 }
