@@ -7,6 +7,7 @@ import WhyUs from "@views/layout/public-page/home/why-us";
 import Services from "@views/layout/public-page/services";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
+import Link from "next/link";
 
 const services = [
   {
@@ -43,7 +44,7 @@ export default function IndexPage() {
         <title>{t("pages-title:home")}</title>
       </Head>
       <main>
-        <section className="w-full md:pt-14">
+        <section className="w-full">
           <HomeIntro />
           <Statistics />
           <AboutUS />
@@ -53,12 +54,12 @@ export default function IndexPage() {
             data={services}
           >
             <div className="flex justify-end">
-              <Button
-                style="secondary"
-                className=" !rounded font-Lato font-bold mt-6"
+              <Link
+                href="/our-services"
+                className="bg-dark-100 !text-[16px] py-3 px-5 text-white hover:opacity-60 duration-200 rounded font-Lato font-bold mt-6"
               >
                 {t("view_all")}
-              </Button>
+              </Link>
             </div>
           </Services>
           <Clients />

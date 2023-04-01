@@ -8,7 +8,7 @@ export default function PublicLayout({
 }) {
   return (
     <section>
-      {/* <NavBar /> */}
+      <NavBar />
       <div>{children}</div>
       <Footer />
     </section>

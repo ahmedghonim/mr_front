@@ -24,7 +24,7 @@ const Company = () => {
       </Text>
       <ul>
         <li>
-          <Link href="#" className="font-medium font-Lato">
+          <Link href="/our-services" className="font-medium font-Lato">
             {t("our_services")}
           </Link>
         </li>
@@ -34,7 +34,7 @@ const Company = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-medium font-Lato">
+          <Link href="/about-us" className="font-medium font-Lato">
             {t("about_us")}
           </Link>
         </li>

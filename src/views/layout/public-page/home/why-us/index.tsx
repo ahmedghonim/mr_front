@@ -31,7 +31,11 @@ export default function WhyUs() {
   const { t } = useTranslation("common");
   return (
     <div className="lg:mx-[120px] px-6 md:mt-[175px] mt-10">
-      <Text as="h2" font="bold" className="!text-[28px] font-Lato mb-6">
+      <Text
+        as="h2"
+        font="bold"
+        className="!text-[28px] md:!text-[48px] font-Lato mb-6"
+      >
         {t("why_us")}
       </Text>
 

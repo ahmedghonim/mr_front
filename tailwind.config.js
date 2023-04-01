@@ -35,6 +35,7 @@ module.exports = {
     },
     fontFamily: {
       Lato: ["Lato", "sans-serif"],
+      Inter: ["inter", "sans-serif"],
     },
   },
   plugins: [require("tailwindcss-rtl"), require("daisyui")],
