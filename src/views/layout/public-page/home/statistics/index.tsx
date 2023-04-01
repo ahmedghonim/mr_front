@@ -23,12 +23,13 @@ export default function Statistics() {
   ];
 
   return (
-    <div className="flex justify-between items-center md:w-[40%] mx-auto mt-[35px]">
+    <div className="flex justify-between items-center md:w-[40%] mx-auto mt-[35px] px-6">
       {numbers.map(({ name, count }, index) => (
         <div
           key={name}
-          className={clsx("text-center px-8", {
-            "border-l border-r  border-[#EAECF0]": index === 1,
+          className={clsx("text-center", {
+            "border-l border-r  border-[#EAECF0] px-6": index === 1,
+            "md:px-6": index !== 1,
           })}
         >
           <Text
