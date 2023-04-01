@@ -6,12 +6,21 @@ import React from "react";
 
 export interface ServesViewProps {
   src: string;
-  title: string;
-  desc: string;
+  title_ar: string;
+  title_en: string;
+  desc_ar: string;
+  desc_en: string;
   revers?: boolean;
 }
 
-function ServesView({ revers, src, title, desc }: ServesViewProps) {
+function ServesView({
+  revers,
+  src,
+  desc_ar,
+  desc_en,
+  title_ar,
+  title_en,
+}: ServesViewProps) {
   const { lang } = useTranslation();
   return (
     <div
@@ -35,18 +44,19 @@ function ServesView({ revers, src, title, desc }: ServesViewProps) {
         )}
       />
 
-      <div className="flex flex-col md:items-start gap-4 w-full">
-        <Text
-          as="h2"
-          size="heading"
-          font="bold"
-          className="text-3xl font-bold w-full"
-        >
-          {title}
-        </Text>
-        <Text as="p" size="md" className="text-start w-full">
-          {desc}
-        </Text>
+      <div className="flex flex-col md:items-start !text-start gap-4 w-full">
+        <div
+          className="!text-start font-bold md:text-3xl text-xl"
+          dangerouslySetInnerHTML={{
+            __html: lang === "ar" ? title_ar : title_en,
+          }}
+        />
+        <div
+          className="!text-start"
+          dangerouslySetInnerHTML={{
+            __html: lang === "ar" ? desc_ar : desc_en,
+          }}
+        />
       </div>
     </div>
   );

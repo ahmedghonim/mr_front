@@ -62,7 +62,7 @@ function NavBar() {
           font="bold"
           className="!h-fit"
         >
-          {t("contact")}
+          {t("common:contact")}
         </Button>
         <ChangeLang />
       </div>

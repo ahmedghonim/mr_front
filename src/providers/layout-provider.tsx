@@ -1,4 +1,5 @@
-import PublicLayout from "@views/layout/public-page/layout";
+import DashboardLayout from "@views/layout/admin-page";
+import PublicLayout from "@views/layout/public-page";
 import { useRouter } from "next/router";
 import React from "react";
 import { ToastContainer } from "react-toastify";
@@ -25,10 +26,10 @@ function LayoutProvider({ children }: Props): JSX.Element {
   const { asPath } = useRouter();
 
   return applyLayoutFor(asPath) ? (
-    <>
+    <DashboardLayout>
       {children}
       <Toast />
-    </>
+    </DashboardLayout>
   ) : (
     <PublicLayout>
       {children}
