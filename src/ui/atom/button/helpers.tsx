@@ -23,7 +23,7 @@ export const variants = {
   size: {
     xs: "!text-sm !px-2 !py-1",
     sm: "!text-sm !px-2  ",
-    base: "!text-base px-3",
+    base: "!text-base !px-5",
     md: "!text-md h-10 px-3",
     lg: "px-8 font-bold",
   },

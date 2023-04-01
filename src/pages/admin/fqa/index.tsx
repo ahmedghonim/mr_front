@@ -1,17 +1,9 @@
- 
- 
-import AboutForm from "../../../components/admin/fqa/form";
+import FQAForm from "@views/admin/fqa/form";
 
-export default   function IndexPage({
-  
-}: {
- 
-}) {
-   
-
+export default function IndexPage({}: {}) {
   return (
     <div>
-      <AboutForm t={t} />
+      <FQAForm />
     </div>
   );
 }

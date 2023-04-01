@@ -1,17 +1,9 @@
- 
- 
-import AboutForm from "../../../components/admin/our-serves/form";
+import OurServicesForm from "@views/admin/our-serves/form";
 
-export default   function IndexPage({
-  
-}: {
- 
-}) {
-   
-
+export default function IndexPage() {
   return (
     <div>
-      <AboutForm t={t} />
+      <OurServicesForm />
     </div>
   );
 }

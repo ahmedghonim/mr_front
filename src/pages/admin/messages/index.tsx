@@ -1,17 +1,9 @@
- 
- 
-import AboutForm from "../../../components/messages/form";
+import MessagesForm from "@views/admin/messages/form";
 
-export default   function IndexPage({
-  
-}: {
- 
-}) {
-   
-
+export default function IndexPage() {
   return (
     <div>
-      <AboutForm t={t} />
+      <MessagesForm />
     </div>
   );
 }

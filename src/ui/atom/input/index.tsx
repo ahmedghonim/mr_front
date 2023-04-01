@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import { FieldProps, Field, ErrorMessage } from 'formik'
-import { TranslateValue } from 'next-translate'
 import React, { FC } from 'react'
 
 export interface InputProps
@@ -10,7 +9,7 @@ export interface InputProps
   type?: string
   placeholder?: string
   value?: any
-  label?: TranslateValue
+  label?: string
   error?: boolean
   StartComponent?: React.FC
   EndComponent?: React.FC

@@ -1,17 +1,9 @@
- 
- 
-import AboutForm from "../../../components/admin/our-client/form";
+import OurClintForm from "@views/admin/our-client/form";
 
-export default   function IndexPage({
-  
-}: {
- 
-}) {
-   
-
+export default function IndexPage({}: {}) {
   return (
     <div>
-      <AboutForm t={t} />
+      <OurClintForm />
     </div>
   );
 }
