@@ -1,9 +1,11 @@
 import { LinkButton, Text } from "@ui/atom";
+import IntroSection from "@views/layout/public-page/main-intro-section";
 import ServesView, { ServesViewProps } from "@views/public/our-serves";
 import servesData from "@views/public/our-serves/mockdata";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import React from "react";
+import ServicesCover from "@image/services-cover.png";
 
 function OurService() {
   const { t } = useTranslation("common");
@@ -13,7 +15,27 @@ function OurService() {
       <Head>
         <title>{t("pages-title:our-services")}</title>
       </Head>
-      <div className="md:px-[120px] md:space-y-[105px] px-6 space-y-6 text-center">
+      <IntroSection image={ServicesCover}>
+        <div className="w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]">
+          <Text
+            as="h1"
+            font="bold"
+            className="!text-[40px] !text-primary-100 font-Lato"
+          >
+            {t("our_services")}
+          </Text>
+          <Text
+            as="p"
+            font="semi"
+            className="!text-[18px] !text-white font-Inter"
+          >
+            {t("our_services_sub")}
+          </Text>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60" />
+      </IntroSection>
+
+      <div className="md:px-[120px] md:space-y-[105px] px-6 space-y-6 text-center md:mt-[120px] mt-[53px]">
         {servesData.map(
           (
             { src, desc_ar, desc_en, title_ar, title_en }: ServesViewProps,

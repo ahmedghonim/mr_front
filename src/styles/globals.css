@@ -30,8 +30,10 @@
   li {
     list-style: disc;
   }
-}
-
-.contact-shadow {
-  box-shadow: 0px 0px 53.5284px 26.7642px rgba(0, 0, 0, 0.03);
+  .intro-image-height {
+    height: calc(100vh - 155px);
+  }
+  .contact-shadow {
+    box-shadow: 0px 0px 53.5284px 26.7642px rgba(0, 0, 0, 0.03);
+  }
 }
