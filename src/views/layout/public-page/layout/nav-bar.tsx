@@ -28,7 +28,7 @@ function NavBar() {
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <nav className="flex justify-between lg:my-[50px] lg:mx-[120px] mx-7 my-7 items-center relative z-[6]">
+    <nav className="flex justify-between lg:my-[35px] lg:mx-[120px] mx-7 my-7 items-center relative z-[6]">
       <div className="flex flex-col justify-start items-center gap-2">
         <Link href="/">
           <TextLogo />
@@ -36,7 +36,7 @@ function NavBar() {
       </div>
 
       {/* ------ Hidden In Mobile ----- */}
-      <div className="lg:flex gap-10 xl:gap-20 hidden ">
+      <div className="lg:flex gap-10 xl:gap-20 hidden">
         {navBar.map(({ link, name }) => (
           <Link
             key={link}
