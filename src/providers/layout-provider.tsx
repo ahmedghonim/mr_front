@@ -1,4 +1,4 @@
-import PublicLayout from "@views/layout/public-page";
+import PublicLayout from "@views/layout/public-page/layout";
 import { useRouter } from "next/router";
 import React from "react";
 import { ToastContainer } from "react-toastify";

@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import NavBar from "./nav-bar";
 
 export default function PublicLayout({
@@ -6,9 +7,10 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <section>
       <NavBar />
-      <main>{children}</main>
-    </div>
+      <div>{children}</div>
+      <Footer />
+    </section>
   );
 }

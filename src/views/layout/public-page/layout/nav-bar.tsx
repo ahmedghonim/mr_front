@@ -20,9 +20,11 @@ function NavBar() {
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <nav className="flex justify-between my-14 mx-[120px] items-center">
+    <nav className="flex justify-between mt-14 mx-[120px] items-center">
       <div className="flex flex-col justify-start items-center gap-2">
-        <TextLogo width="200" />
+        <Link href="/">
+          <TextLogo />
+        </Link>
       </div>
       <div className="flex gap-20">
         {navBar.map(({ link, name }) => (
@@ -30,7 +32,7 @@ function NavBar() {
             key={link}
             href={link}
             className={clsx(
-              "text-dark-100 text-lg h-fit   hover:duration-100 hover:font-bold duration-75 border-primary-100",
+              "text-dark-100 text-lg h-fit hover:duration-200 hover:font-bold duration-75 border-primary-100",
 
               {
                 "font-bold": isActiveTab(link),
