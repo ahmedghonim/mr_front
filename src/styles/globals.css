@@ -24,4 +24,7 @@
   .ql-container {
     @apply min-h-[200px];
   }
+  li {
+    list-style: disc;
+  }
 }

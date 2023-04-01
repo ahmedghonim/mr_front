@@ -3,7 +3,7 @@ export const variants = {
     primary:
       "!bg-primary-100 !text-white !h-fit disabled:!opacity-25 hover:!bg-opacity-75",
     secondary:
-      "!bg-dark-200 !text-white  disabled:!opacity-25 hover:!bg-opacity-75",
+      "!bg-dark-200 !text-white  disabled:!opacity-25 hover:!bg-opacity-75 hover:!bg-primary-100",
     transparent:
       "!text-primary-100 font-bold flex items-center justify-between !px-0",
     outline:
