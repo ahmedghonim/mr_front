@@ -98,7 +98,8 @@ function ContactForm({ onSubmit }: { onSubmit: () => void }) {
         <div className="flex justify-end">
           <Button
             type="submit"
-            className="sm:!w-fit w-full ml-auto py-[15px] !px-[48px] !rounded !text-[16px] !bg-[#181818]"
+            style="secondary"
+            className="sm:!w-fit w-full ml-auto py-[15px] !px-[48px] !rounded !text-[16px] "
             font="mid"
           >
             {t("send_message")}

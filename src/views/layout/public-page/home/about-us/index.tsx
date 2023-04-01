@@ -42,7 +42,7 @@ export default function AboutUS() {
               - {t("about_us_4")}
             </Text>
           </div>
-          <Button className="!bg-[#181818] !text-[16px]">
+          <Button style="secondary" className="!text-[16px]">
             {t("read_more")}
           </Button>
         </div>

@@ -1,21 +1,20 @@
 import clsx from "clsx";
 import { FieldProps, Field, ErrorMessage } from "formik";
-import { TranslateValue } from "next-translate";
 import React, { FC } from "react";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
+  labelStyle?: string;
   isForm?: boolean;
   type?: string;
   placeholder?: string;
   value?: any;
-  label?: TranslateValue;
+  label?: string;
   error?: boolean;
   StartComponent?: React.FC;
   EndComponent?: React.FC;
   isSearching?: boolean;
-  labelStyle?: string;
   ref?: any;
 }
 const Input: FC<InputProps> = ({ name, isForm = false, ...props }) => {

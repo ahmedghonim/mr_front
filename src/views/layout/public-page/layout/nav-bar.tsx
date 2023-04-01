@@ -1,39 +1,45 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import TextLogo from "@svg/text-logo.svg";
 import clsx from "clsx";
 import useTranslation from "next-translate/useTranslation";
 import { Button } from "@ui/atom";
 import { useRouter } from "next/router";
+import MenuIcon from "@svg/menu.svg";
+import AboutIcon from "@svg/about-us.svg";
+import OurServesIcon from "@svg/our-serves.svg";
+import FQAIcon from "@svg/fqa.svg";
 
+import LogoIcon from "@svg/logo.svg";
+import ChangeLang from "@views/layout/shared/change-lang";
+import VerticalBar from "@views/layout/shared/vertical-bar";
 function NavBar() {
-  const { t, lang } = useTranslation("pages-title");
-  const { asPath, pathname } = useRouter();
-
+  const { t } = useTranslation("pages-title");
+  const { asPath } = useRouter();
+  const [openMenu, setOpenMenu] = useState(false);
   const navBar = [
-    { name: "home", link: "/" },
-    { name: "our-serves", link: "/our-serves" },
-    { name: "industries", link: "/industries" },
-    { name: "fqa", link: "/fqa" },
+    { name: "home", link: "/", icon: LogoIcon },
+    { name: "our-services", link: "/our-services", icon: OurServesIcon },
+    { name: "about-us", link: "/about-us", icon: AboutIcon },
+    { name: "fqa", link: "/fqa", icon: FQAIcon },
   ];
 
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <nav className="flex justify-between mt-14 mx-[120px] items-center">
+    <nav className="flex justify-between md:my-14 md:mx-[120px] mx-7 my-7 items-center">
       <div className="flex flex-col justify-start items-center gap-2">
-        <Link href="/">
-          <TextLogo />
-        </Link>
+        <TextLogo />
       </div>
-      <div className="flex gap-20">
+
+      {/* ------ Hidden In Mobile ----- */}
+      <div className="md:flex gap-20 hidden ">
         {navBar.map(({ link, name }) => (
           <Link
             key={link}
             href={link}
             className={clsx(
-              "text-dark-100 text-lg h-fit hover:duration-200 hover:font-bold duration-75 border-primary-100",
-
+              "text-dark-100 text-lg h-fit  hover:duration-100 hover:font-bold duration-75 border-primary-100",
               {
                 "font-bold": isActiveTab(link),
               }
@@ -46,7 +52,7 @@ function NavBar() {
           </Link>
         ))}
       </div>
-      <div className="flex items-center gap-3">
+      <div className="md:flex items-center gap-3 hidden">
         <Button
           style="secondary"
           rounded="full"
@@ -56,10 +62,17 @@ function NavBar() {
         >
           {t("contact")}
         </Button>
-        <Link href={pathname} locale={lang === "ar" ? "en" : "ar"}>
-          {lang === "ar" ? "EN" : "AR"}
-        </Link>
+        <ChangeLang />
       </div>
+      {/* ------ Hidden In Mobile ----- */}
+
+      {/* ------ Show In Mobile ----- */}
+
+      <span className="md:hidden" onClick={() => setOpenMenu(true)}>
+        <MenuIcon />
+      </span>
+
+      {openMenu && <VerticalBar setOpenMenu={setOpenMenu} navBar={navBar} />}
     </nav>
   );
 }

@@ -1,6 +1,6 @@
 {
   "home": "Home",
-  "our-serves": "Our Serves",
+  "our-services": "Our Serves",
   "industries": "Industries",
   "fqa": "FQA",
   "services": "Services",
@@ -57,5 +57,6 @@
   "send_message": "Send Message",
   "contact_us": "Contact Us",
   "contact_us_sub": "Any question or remarks? Just write us a message!",
-  "why_us": "Why Us"
+  "why_us": "Why Us",
+  "news_litter": "Newsletter"
 }

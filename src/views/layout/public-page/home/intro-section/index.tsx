@@ -26,7 +26,7 @@ export default function HomeIntro() {
           className="md:text-5xl text-2xl font-bold md:leading-[55px]"
           dangerouslySetInnerHTML={{ __html: t("home_intro_text") }}
         />
-        <Button className="!bg-dark-100 mt-3 !rounded">
+        <Button style="secondary" className=" mt-3 !rounded">
           {t("get_in_touch")}
         </Button>
       </div>

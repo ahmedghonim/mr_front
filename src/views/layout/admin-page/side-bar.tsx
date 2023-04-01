@@ -4,15 +4,16 @@ import React from "react";
 import Logo from "@svg/admin-logo.svg";
 import AboutUs from "@svg/about-us.svg";
 import OurIndustries from "@svg/our-industries.svg";
-import OurServes from "@svg/our-serves.svg";
+import OurServes from "@svg/our-services.svg";
 import OurClient from "@svg/our-client.svg";
 import Faq from "@svg/fqa.svg";
 import Messages from "@svg/messages.svg";
 import clsx from "clsx";
 import { useSelectedLayoutSegments } from "next/navigation";
-import useNavigate from "@hooks/useNavigate";
+import useTranslation from "next-translate/useTranslation";
 
 function SideBar() {
+  const { t } = useTranslation("common");
   const [admin, subRoute] = useSelectedLayoutSegments();
 
   const sideBar = [
@@ -22,7 +23,7 @@ function SideBar() {
       link: "admin/our-industries",
       icon: OurIndustries,
     },
-    { name: "our-serves", link: "/admin/our-serves", icon: OurServes },
+    { name: "our-services", link: "/admin/our-services", icon: OurServes },
     { name: "our-client", link: "/admin/our-client", icon: OurClient },
     { name: "fqa", link: "/admin/fqa", icon: Faq },
     { name: "messages", link: "/admin/messages", icon: Messages },
@@ -50,7 +51,7 @@ function SideBar() {
             )}
           >
             <Image src={icon} width={24} height={18} alt={name} />
-            {t[name as "home"]}
+            {t(name)}
           </Link>
         ))}
       </div>

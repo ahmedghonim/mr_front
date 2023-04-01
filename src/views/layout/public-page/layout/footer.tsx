@@ -116,7 +116,7 @@ const NewsLetter = () => {
         font="semi"
         className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato md:mb-10 mb-4"
       >
-        {t("company")}
+        {t("news_litter")}
       </Text>
 
       <input
@@ -124,7 +124,7 @@ const NewsLetter = () => {
         placeholder={t("mail_placeholder")}
         className="bg-white rounded-[10px] py-[14px] w-full px-4 outline-none border-[1px] border-[#E4E4E7]"
       />
-      <Button className="!bg-[#181818] w-full !mt-4 py-3">
+      <Button style="secondary" className="w-full !mt-4 py-3">
         {t("subscribe_now")}
       </Button>
     </div>

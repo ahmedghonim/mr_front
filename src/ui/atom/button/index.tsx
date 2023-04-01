@@ -16,7 +16,7 @@ function Button({
   text = "center",
   className,
   children,
-  size = "sm",
+  size = "base",
   font = "normal",
   type = "button",
   rounded = "default",

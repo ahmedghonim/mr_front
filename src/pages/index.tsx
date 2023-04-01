@@ -53,7 +53,10 @@ export default function IndexPage() {
             data={services}
           >
             <div className="flex justify-end">
-              <Button className="!bg-dark-100 !rounded font-Lato font-bold mt-6">
+              <Button
+                style="secondary"
+                className=" !rounded font-Lato font-bold mt-6"
+              >
                 {t("view_all")}
               </Button>
             </div>

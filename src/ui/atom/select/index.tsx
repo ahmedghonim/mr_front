@@ -1,38 +1,37 @@
-import React from 'react'
-import ReactSelect, { Props } from 'react-select'
-import ReactSelectTheme from './ReactSelectTheme'
-import { ErrorMessage, Field, FieldProps } from 'formik'
-import { TranslateValue } from 'next-translate'
+import React from "react";
+import ReactSelect, { Props } from "react-select";
+import ReactSelectTheme from "./ReactSelectTheme";
+import { ErrorMessage, Field, FieldProps } from "formik";
 
 export interface Options {
-  value: string | number
-  label: string | number | TranslateValue
+  value: string | number;
+  label: string | number;
 }
 
-interface SelectProps extends Omit<Props, 'placeholder'> {
-  options: Options[]
-  isForm?: boolean
-  label?: TranslateValue
-  placeholder?: TranslateValue
+interface SelectProps extends Omit<Props, "placeholder"> {
+  options: Options[];
+  isForm?: boolean;
+  label?: string;
+  placeholder?: string;
 }
 
 function Select({
   options,
-  className = '',
+  className = "",
   label,
   isForm = true,
-  name = '',
+  name = "",
   required,
   placeholder,
   ...props
 }: SelectProps & Partial<FieldProps>) {
-  const styles = ReactSelectTheme('light')
+  const styles = ReactSelectTheme("light");
 
   return isForm ? (
     <Field name="department">
       {({
         field,
-        form: { errors, touched, setFieldValue, values }
+        form: { errors, touched, setFieldValue, values },
       }: FieldProps) => {
         return (
           <div className="w-full flex flex-col">
@@ -40,7 +39,7 @@ function Select({
               <label
                 htmlFor={name}
                 className={
-                  'text-start block text-sm  w-full text-dark-100 font-medium'
+                  "text-start block text-sm  w-full text-dark-100 font-medium"
                 }
               >
                 {label as string}
@@ -55,22 +54,22 @@ function Select({
               styles={styles}
               {...field}
               value={options.filter(function (option) {
-                return option.value === values[name]
+                return option.value === values[name];
               })}
               name={name}
               classNamePrefix={`select2-selection ${
-                props.isDisabled === true ? 'opacity-80' : ''
+                props.isDisabled === true ? "opacity-80" : ""
               } ${
                 Boolean(touched[name]) && Boolean(errors[name])
-                  ? '!border-error-100'
-                  : ''
+                  ? "!border-error-100"
+                  : ""
               } `}
               {...props}
               placeholder={placeholder as string}
               className={`h-9 w-full ${className}  `}
               onChange={(selectedOption: any) => {
                 if (props?.onChange == null) {
-                  setFieldValue(name, selectedOption.value)
+                  setFieldValue(name, selectedOption.value);
                 }
               }}
             />
@@ -78,7 +77,7 @@ function Select({
               <ErrorMessage name={name} />
             </div>
           </div>
-        )
+        );
       }}
     </Field>
   ) : (
@@ -87,7 +86,7 @@ function Select({
         <label
           htmlFor={name}
           className={
-            'text-start block text-sm  w-full text-dark-100 font-medium'
+            "text-start block text-sm  w-full text-dark-100 font-medium"
           }
         >
           {label as string}
@@ -103,7 +102,7 @@ function Select({
         className={`h-10 w-full ${className} `}
       />
     </div>
-  )
+  );
 }
 
-export default Select
+export default Select;

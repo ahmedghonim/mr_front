@@ -1,14 +1,10 @@
- 
- 
-import TextEditor from "ui/text-editor";
+import TextEditor from "@ui/atom/text-editor";
 import UploadImage from "@ui/atom/upload-image";
-import Button from "ui/button";
+import { Button, Input } from "@ui/atom";
 import { Form, Formik } from "formik";
 import * as yup from "yup";
-import Modal from "@ui/atom/modal/index.tsx";
-import { useSelector, useDispatch } from "react-redux";
-import { setModal, modalState } from "app/redux/features/modal";
-import Input from "ui/input";
+import useTranslation from "next-translate/useTranslation";
+
 const validationSchema = yup.object({
   image: yup.string().required("asdasd"),
   en_text: yup.string().required("a7a").min(10),
@@ -17,7 +13,8 @@ const validationSchema = yup.object({
 
 export type FormData = yup.InferType<typeof validationSchema>;
 
-function FormData( ) {
+function OurIndustryForm() {
+  const { t } = useTranslation("common");
   const onSubmit = (data: FormData) => {
     console.log(data);
   };
@@ -39,13 +36,13 @@ function FormData( ) {
           <UploadImage name="image" />
         </div>
         <div className="flex-1 flex-col flex gap-4">
-          <Input name="ar_title" label={t["title-lang-ar"]} />
-          <TextEditor name="ar_text" label={t["text-lang-ar"]} />
-          <Input name="en_title" label={t["title-lang-ar"]} />
-          <TextEditor name="en_text" label={t["text-lang-en"]} />
+          <Input name="ar_title" label={t("title-lang-ar")} />
+          <TextEditor name="ar_text" label={t("text-lang-ar")} />
+          <Input name="en_title" label={t("title-lang-ar")} />
+          <TextEditor name="en_text" label={t("text-lang-en")} />
           <div className="flex-1 flex justify-end">
-            <Button primary type="submit">
-              {t.submit}
+            <Button style="primary" type="submit">
+              {t("submit")}
             </Button>
           </div>
         </div>
@@ -54,4 +51,4 @@ function FormData( ) {
   );
 }
 
-export default FormData;
+export default OurIndustryForm;

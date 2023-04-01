@@ -1,6 +1,5 @@
-import { FieldProps, Field } from 'formik'
-import { TranslateValue } from 'next-translate'
-import React, { FC } from 'react'
+import { FieldProps, Field } from "formik";
+import React, { FC } from "react";
 
 const CheckBox: FC<CheckBoxProps & { isForm?: boolean }> = ({
   name,
@@ -19,28 +18,28 @@ const CheckBox: FC<CheckBoxProps & { isForm?: boolean }> = ({
               </div>
             )}
           </div>
-        )
+        );
       }}
     </Field>
   ) : (
     <CustomCheckBox {...props} name={name} />
-  )
-}
-export default CheckBox
+  );
+};
+export default CheckBox;
 
 interface CheckBoxProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  name: string
-  value?: any
-  label?: React.ReactNode | TranslateValue
-  error?: boolean
-  labelStyling?: string
+  name: string;
+  value?: any;
+  label?: React.ReactNode | string;
+  error?: boolean;
+  labelStyling?: string;
 }
 
 function CustomCheckBox({
   name,
   label,
   value,
-  labelStyling = '',
+  labelStyling = "",
   ...props
 }: CheckBoxProps) {
   return (
@@ -60,5 +59,5 @@ function CustomCheckBox({
         )}
       </label>
     </div>
-  )
+  );
 }

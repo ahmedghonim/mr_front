@@ -1,6 +1,6 @@
 {
   "home": "الرئيسة",
-  "our-serves": "خدماتنا",
+  "our-services": "خدماتنا",
   "industries": "Industries",
   "fqa": "الاسئلة الشائعة",
   "services": "خدمات",
@@ -57,5 +57,6 @@
   "send_message": "ارسال رسالة",
   "contact_us": "تواصل معنا",
   "contact_us_sub": "اي سؤال او ملاحظات؟ فقط اكتب لنا رسالة!",
-  "why_us": "لماذا نحن"
+  "why_us": "لماذا نحن",
+  "news_litter": "النشرة الإخبارية"
 }

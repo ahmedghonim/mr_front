@@ -1,23 +1,23 @@
-import clsx from 'clsx'
-import React from 'react'
-import Link from 'next/link'
-import { IconRender, Props, mainClassName, variants } from './helpers'
+import clsx from "clsx";
+import React from "react";
+import Link from "next/link";
+import { IconRender, Props, mainClassName, variants } from "./helpers";
 
 interface LinkButtonProps extends Props {
-  href: string
+  href: string;
 }
 
 function LinkButton({
-  style = 'primary',
-  width = 'normal',
-  text = 'center',
+  style = "primary",
+  width = "normal",
+  text = "center",
   className,
   children,
-  size = 'sm',
+  size = "base",
   type,
-  rounded = 'default',
+  rounded = "default",
   href,
-  icon
+  icon,
 }: LinkButtonProps) {
   return (
     <Link
@@ -37,7 +37,7 @@ function LinkButton({
         {icon && IconRender(icon)} {children}
       </div>
     </Link>
-  )
+  );
 }
 
-export default LinkButton
+export default LinkButton;

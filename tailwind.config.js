@@ -16,6 +16,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      borderRadius: {
+        "3xl": "30px",
+      },
       colors: {
         primary: {
           100: "#E7BB4C",
