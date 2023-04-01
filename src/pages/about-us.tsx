@@ -11,7 +11,7 @@ export default function AboutUs() {
   return (
     <>
       <Head>
-        <title>{t("pages-title:about_us")}</title>
+        <title>{t("pages-title:about-us")}</title>
       </Head>
 
       <IntroSection image={AboutusCover}>

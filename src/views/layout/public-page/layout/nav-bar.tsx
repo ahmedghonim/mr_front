@@ -30,7 +30,9 @@ function NavBar() {
   return (
     <nav className="flex justify-between md:my-14 md:mx-[120px] mx-7 my-7 items-center relative z-[6]">
       <div className="flex flex-col justify-start items-center gap-2">
-        <TextLogo />
+        <Link href="/">
+          <TextLogo />
+        </Link>
       </div>
 
       {/* ------ Hidden In Mobile ----- */}

@@ -12,7 +12,7 @@ export default function ContactUsSSS() {
   return (
     <>
       <Head>
-        <title>{t("contact_us")}</title>
+        <title>{t("contact-us")}</title>
       </Head>
       <IntroSection image={ContactCover}>
         <div className="w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]">
