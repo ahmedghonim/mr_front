@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useTransition } from "react";
 import Vision from "@svg/vision-icon.svg";
 import Mission from "@svg/mission.svg";
 import Objective from "@svg/objective.svg";
@@ -14,7 +14,7 @@ interface SingleCardType {
 const SingleCard = ({ title, Icon, desc }: SingleCardType) => {
   const { t } = useTranslation("common");
   return (
-    <div className="flex flex-col items-center gap-3 w-[25%]">
+    <div className="flex flex-col items-center gap-3">
       <Icon />
       <Text font="bold" as="h2" className="text-[28px] font-Lato">
         {t(title)}
@@ -28,11 +28,18 @@ const SingleCard = ({ title, Icon, desc }: SingleCardType) => {
 };
 
 export default function WhyUs() {
+  const { t } = useTranslation("common");
   return (
-    <div className="md:mx-[120px] md:mt-[175px] flex justify-between">
-      <SingleCard title="vision" Icon={Vision} desc="vision_desc" />
-      <SingleCard title="mission" Icon={Mission} desc="mission_desc" />
-      <SingleCard title="objective" Icon={Objective} desc="objective_desc" />
+    <div className="lg:mx-[120px] px-6 md:mt-[175px] mt-10">
+      <Text as="h2" font="bold" className="!text-[28px] font-Lato mb-6">
+        {t("why_us")}
+      </Text>
+
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
+        <SingleCard title="vision" Icon={Vision} desc="vision_desc" />
+        <SingleCard title="mission" Icon={Mission} desc="mission_desc" />
+        <SingleCard title="objective" Icon={Objective} desc="objective_desc" />
+      </div>
     </div>
   );
 }

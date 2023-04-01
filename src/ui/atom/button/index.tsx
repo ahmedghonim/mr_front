@@ -1,40 +1,40 @@
-import clsx from 'clsx'
-import React from 'react'
-import Spinier from '@svg/spinier.svg'
+import clsx from "clsx";
+import React from "react";
+import Spinier from "@svg/spinier.svg";
 import {
   IconRender,
   Props,
   mainClassName,
   spinierVariants,
-  variants
-} from './helpers'
+  variants,
+} from "./helpers";
 
 function Button({
   onClick,
-  style = 'primary',
-  width = 'normal',
-  text = 'center',
+  style = "primary",
+  width = "normal",
+  text = "center",
   className,
   children,
-  size = 'sm',
-  font = 'normal',
-  type = 'button',
-  rounded = 'default',
+  size = "sm",
+  font = "normal",
+  type = "button",
+  rounded = "default",
   isLoading,
   disabled = false,
-  icon
+  icon,
 }: Props) {
   return (
     <button
       className={clsx(
         mainClassName,
-        className,
         variants.size[size],
         variants.text[text],
         variants.width[width],
         variants.style[style],
         variants.font[font],
-        variants.rounded[rounded]
+        variants.rounded[rounded],
+        className
       )}
       disabled={disabled || isLoading}
       type={type}
@@ -50,7 +50,7 @@ function Button({
         </div>
       )}
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

@@ -3,6 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import React from "react";
 import HomeCover from "@image/home-cover.png";
+import clsx from "clsx";
 
 interface ServicesCardProps {
   image: string | any;
@@ -48,14 +49,18 @@ export default function Services({
   const { t } = useTranslation("common");
 
   return (
-    <div className="md:pt-[124px]">
-      <Text as="h2" font="bold" className={`mb-10 !text-[48px] ${headStyle}`}>
+    <div className="md:pt-[124px] pt-[40px]">
+      <Text
+        as="h2"
+        font="bold"
+        className={clsx("!mb-10 !text-3xl lg:!text-[48px]", headStyle)}
+      >
         {t("our_services")}
       </Text>
 
       {/* -------- our services ------- */}
-      <div className={`md:px-[120px] ${className}`}>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-14">
+      <div className={clsx("lg:px-[120px]", className)}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-14">
           {data?.map((service) => (
             <ServicesCard key={service.service_name} {...service} />
           ))}

@@ -18,7 +18,7 @@ const Company = () => {
       <Text
         as="h4"
         font="semi"
-        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato mb-10"
+        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato md:mb-10 mb-4"
       >
         {t("company")}
       </Text>
@@ -51,7 +51,7 @@ const Contacts = () => {
       <Text
         as="h4"
         font="semi"
-        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato mb-10"
+        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato md:mb-10 mb-4"
       >
         {t("contacts")}
       </Text>
@@ -87,7 +87,7 @@ const SocialIcons = () => {
       <Text
         as="h4"
         font="semi"
-        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato mb-4"
+        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato md:mb-10 mb-4"
       >
         {t("get_in_touch")}
       </Text>
@@ -114,7 +114,7 @@ const NewsLetter = () => {
       <Text
         as="h4"
         font="semi"
-        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato mb-10"
+        className="!text-start !text-[13px] uppercase !text-[#454545] !font-Lato md:mb-10 mb-4"
       >
         {t("company")}
       </Text>
@@ -137,9 +137,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="md:px-[124px] pb-[30px] pt-10 !bg-[#FCF8DB]">
+    <footer className="lg:px-[124px] px-6 pb-[30px] pt-10 !bg-[#FCF8DB]">
       {/* -------- top section ------- */}
-      <div className="grid grid-cols-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
         {/* -------- col 1 ------- */}
 
         <Link href="/">
@@ -163,7 +163,7 @@ export default function Footer() {
         <NewsLetter />
       </div>
       {/* -------- bottom section ------- */}
-      <Text as="p" className="md:mt-[72px]">{`${t(
+      <Text as="p" className="md:mt-[72px] mt-[42px]">{`${t(
         "copy_writes_start"
       )} ${currentYear} ,${t("copy_writes_end")}`}</Text>
     </footer>

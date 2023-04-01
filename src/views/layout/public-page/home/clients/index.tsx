@@ -16,11 +16,13 @@ export default function Clients() {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
-  console.log(navigationPrevRef.current);
-
   return (
-    <div className="md:px-[120px] md:pt-[100px] md:pb-[126px]">
-      <Text as="h3" size="heading" className="mb-[50px]">
+    <div className="lg:px-[120px] px-6 md:pt-[100px] pt-8 md:pb-[126px] pb-[60px]">
+      <Text
+        as="h3"
+        font="bold"
+        className="!text-[28px] md:!text-[48px] md:mb-[30px]"
+      >
         {t("our_clients")}
       </Text>
 
@@ -29,7 +31,7 @@ export default function Clients() {
         <Swiper
           modules={[Navigation]}
           spaceBetween={50}
-          slidesPerView={5}
+          slidesPerView={1.5}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -37,6 +39,11 @@ export default function Clients() {
           onBeforeInit={(swiper: any) => {
             swiper.params.navigation.prevEl = navigationPrevRef.current;
             swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2.5 },
+            992: { slidesPerView: 3.5 },
+            1200: { slidesPerView: 5 },
           }}
         >
           <SwiperSlide>
@@ -62,13 +69,13 @@ export default function Clients() {
           </SwiperSlide>
         </Swiper>
         <button
-          className="absolute top-1/2 -translate-y-1/2 -left-6 rotate-180"
+          className="absolute top-1/2 -translate-y-1/2 -left-6 rotate-180 hidden lg:block"
           ref={navigationPrevRef}
         >
           <SwiperArrow />
         </button>
         <button
-          className="absolute top-1/2 -translate-y-1/2 -right-6"
+          className="absolute top-1/2 -translate-y-1/2 -right-6 hidden lg:block"
           ref={navigationNextRef}
         >
           <SwiperArrow />

@@ -8,7 +8,7 @@ interface Props {
 
 export default function IntroSection({ children, image }: Props) {
   return (
-    <div className="relative w-full h-[560px]">
+    <div className="relative w-full md:h-[560px] h-[250px] mt-[30px]">
       <Image
         src={image}
         alt=""
