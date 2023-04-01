@@ -42,7 +42,7 @@ function NavBar() {
             key={link}
             href={link}
             className={clsx(
-              "relative text-dark-100 text-lg h-fit [&:hover>.line]:w-full",
+              "relative text-dark-200 text-lg h-fit [&:hover>.line]:w-full",
               {
                 "font-bold [&>.line]:w-full": isActiveTab(link),
               }
