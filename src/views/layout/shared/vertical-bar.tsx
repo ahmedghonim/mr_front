@@ -13,16 +13,22 @@ type Props = {
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
   }[];
   setOpenMenu?: React.Dispatch<React.SetStateAction<boolean>>;
+  className?: string;
 };
 
-function VerticalBar({ setOpenMenu, navBar }: Props) {
+function VerticalBar({ setOpenMenu, navBar, className }: Props) {
   const { asPath } = useRouter();
   const { t } = useTranslation("pages-title");
 
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <div className="top-0 left-0 h-screen w-full bg-[#FDFAE7] fixed">
+    <div
+      className={clsx(
+        "top-0 left-0 h-screen w-full bg-[#FDFAE7] fixed",
+        className
+      )}
+    >
       <div className="flex justify-center mt-14">
         <TextLogo />
       </div>
