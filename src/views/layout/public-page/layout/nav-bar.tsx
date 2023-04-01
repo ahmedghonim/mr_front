@@ -28,7 +28,7 @@ function NavBar() {
   const isActiveTab = (_link: string) => asPath === _link;
 
   return (
-    <nav className="flex justify-between lg:my-14 lg:mx-[120px] mx-7 my-7 items-center relative z-[6]">
+    <nav className="flex justify-between lg:my-[50px] lg:mx-[120px] mx-7 my-7 items-center relative z-[6]">
       <div className="flex flex-col justify-start items-center gap-2">
         <Link href="/">
           <TextLogo />
