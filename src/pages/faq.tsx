@@ -9,34 +9,16 @@ export default function FAQ() {
 
   const questions = [
     {
-      ques: t("How much time does it take ?"),
-      answer: t(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ),
+      ques: t("ques_1"),
+      answer: t("answer_1"),
     },
     {
-      ques: t("What is your class naming convention ?"),
-      answer: t(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ),
+      ques: t("ques_2"),
+      answer: t("answer_2"),
     },
     {
-      ques: t("How do we communicate ?"),
-      answer: t(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ),
-    },
-    {
-      ques: t("I have a bigger project. Can you handle it ?"),
-      answer: t(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ),
-    },
-    {
-      ques: t("What is your class naming convention ?"),
-      answer: t(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ),
+      ques: t("ques_3"),
+      answer: t("answer_3"),
     },
   ];
 
