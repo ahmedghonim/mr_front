@@ -27,6 +27,18 @@
   .ql-container {
     @apply min-h-[200px];
   }
+  /* width */
+  ::-webkit-scrollbar {
+    @apply h-1.5 w-2;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply !rounded-full bg-[#FFFCF3];
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-100 rounded-full;
+  }
   li {
     list-style: disc;
     padding-bottom: 10px;

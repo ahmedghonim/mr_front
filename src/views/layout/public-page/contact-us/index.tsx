@@ -14,7 +14,7 @@ function ContactUs({
   return (
     <section
       className={clsx(
-        "p-2 bg-white md:!rounded-[10px] !rounded contact-shadow mt-[80px] pb-[100px] md:pb-0",
+        "p-0 bg-white md:!rounded-[10px] !rounded contact-shadow mt-[80px] pb-[100px] md:pb-0",
         className
       )}
     >
