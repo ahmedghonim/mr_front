@@ -41,7 +41,7 @@ function ContactInfo() {
   };
 
   return (
-    <div className="sm:w-[41%] w-full lg:h-[647px] sm:h-[480px] flex flex-col bg-[#DEBB5F] gap-8 lg:p-10 p-4 rounded-[10px] relative overflow-hidden">
+    <div className="sm:w-[41%] w-full lg:h-[647px] m-2 sm:h-[480px] flex flex-col bg-[#DEBB5F] gap-8 lg:p-10 p-4 rounded-[10px] relative overflow-hidden">
       <div className="text-center sm:text-start">
         <Text
           as="h2"

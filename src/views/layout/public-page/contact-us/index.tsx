@@ -14,15 +14,13 @@ function ContactUs({
   return (
     <section
       className={clsx(
-        "p-0 bg-white md:!rounded-[10px] !rounded contact-shadow mt-[80px] pb-[100px] md:pb-0",
+        "bg-white  contact-shadow mt-[80px] pb-[100px] md:pb-0 flex flex-col sm:flex-row justify-between items-start w-full rounded-[10px]",
         className
       )}
     >
-      <div className="flex flex-col sm:flex-row justify-between items-start w-full">
-        <ContactInfo />
-        <div className="sm:w-[55%] w-full lg:pt-12 pt-4 sm:pt-0">
-          <ContactForm onSubmit={onSubmit} />
-        </div>
+      <ContactInfo />
+      <div className="sm:w-[55%] w-full lg:pt-12 pt-4 sm:pt-0">
+        <ContactForm onSubmit={onSubmit} />
       </div>
     </section>
   );
