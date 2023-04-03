@@ -1,10 +1,10 @@
-import { Button } from "@ui/atom";
 import AboutUS from "@views/layout/public-page/home/about-us";
 import Clients from "@views/layout/public-page/home/clients";
 import HomeIntro from "@views/layout/public-page/home/intro-section";
 import Statistics from "@views/layout/public-page/home/statistics";
 import WhyUs from "@views/layout/public-page/home/why-us";
 import Services from "@views/layout/public-page/services";
+import servesData from "@views/public/our-serves/mockdata";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import Link from "next/link";
@@ -38,12 +38,13 @@ const services = [
 
 export default function IndexPage() {
   const { t } = useTranslation("common");
+  console.log('servesData >>>> ', servesData)
   return (
     <>
       <Head>
         <title>{t("pages-title:home")}</title>
       </Head>
-      <main>
+      <div>
         <section className="w-full">
           <HomeIntro />
           <Statistics />
@@ -51,7 +52,7 @@ export default function IndexPage() {
           <WhyUs />
           <Services
             className="bg-[#F2E4BF] md:pt-[70px] pt-10 md:pb-[108px] pb-10 px-6 rounded-[12px]"
-            data={services}
+            data={servesData as any}
           >
             <div className="flex justify-end">
               <Link
@@ -64,7 +65,7 @@ export default function IndexPage() {
           </Services>
           <Clients />
         </section>
-      </main>
+      </div>
     </>
   );
 }

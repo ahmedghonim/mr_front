@@ -16,12 +16,12 @@ const SingleCard = ({ title, Icon, desc }: SingleCardType) => {
   return (
     <div className="flex flex-col items-center gap-3">
       <Icon />
-      <Text font="bold" as="h2" className="text-[28px] font-Lato">
+      <Text font="bold" as="h2" className="text-[28px] font-Lato ">
         {t(title)}
       </Text>
       <p
         dangerouslySetInnerHTML={{ __html: t(desc) }}
-        className="text-center text-sm font-Lato font-bold"
+        className="text-start text-sm font-Lato font-bold"
       />
     </div>
   );
@@ -41,8 +41,8 @@ export default function WhyUs() {
 
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
         <SingleCard title="vision" Icon={Vision} desc="vision_desc" />
-        <SingleCard title="mission" Icon={Mission} desc="mission_desc" />
         <SingleCard title="objective" Icon={Objective} desc="objective_desc" />
+        <SingleCard title="mission" Icon={Mission} desc="mission_desc" />
       </div>
     </div>
   );

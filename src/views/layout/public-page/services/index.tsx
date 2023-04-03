@@ -2,19 +2,21 @@ import { Text } from "@ui/atom";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import React from "react";
-import HomeCover from "@image/home-cover.png";
 import clsx from "clsx";
 
 interface ServicesCardProps {
-  image: string | any;
-  service_name: string;
+  src: string;
+  title_ar: string;
+  title_en: string;
 }
 
-const ServicesCard = ({ image, service_name: name }: ServicesCardProps) => {
+const ServicesCard = ({ src, title_ar, title_en }: ServicesCardProps) => {
+  const { lang } = useTranslation();
+
   return (
     <div className="relative h-[400px] overflow-hidden">
       <Image
-        src={HomeCover}
+        src={src}
         width={1000}
         height={1000}
         alt="image"
@@ -26,7 +28,7 @@ const ServicesCard = ({ image, service_name: name }: ServicesCardProps) => {
           as="h3"
           className="font-Lato !text-[28px] !text-white"
         >
-          {name}
+          {lang === "ar" ? title_ar : title_en}
         </Text>
       </div>
     </div>
@@ -34,7 +36,7 @@ const ServicesCard = ({ image, service_name: name }: ServicesCardProps) => {
 };
 
 interface ServicesProps {
-  data: ServicesCardProps[];
+  data: [];
   children: React.ReactNode;
   headStyle?: string;
   className?: string;
@@ -61,8 +63,8 @@ export default function Services({
       {/* -------- our services ------- */}
       <div className={clsx("lg:px-[120px]", className)}>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-14">
-          {data?.map((service) => (
-            <ServicesCard key={service.service_name} {...service} />
+          {data.slice(0, 6).map((service, index) => (
+            <ServicesCard key={index} {...(service as ServicesCardProps)} />
           ))}
         </div>
         {children}
