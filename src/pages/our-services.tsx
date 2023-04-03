@@ -35,7 +35,7 @@ function OurService() {
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60" />
       </IntroSection>
 
-      <div className="md:px-[120px] md:space-y-[105px] px-6 space-y-6 text-center md:mt-[120px] mt-[53px]">
+      <div className="md:px-[120px] md:space-y-[105px] px-6 space-y-6 text-center md:mt-[120px] my-[53px]">
         {servesData.map(
           (
             { src, desc_ar, desc_en, title_ar, title_en }: ServesViewProps,
