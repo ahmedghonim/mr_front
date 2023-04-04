@@ -156,29 +156,29 @@ export default function Footer() {
       {/* -------- top section ------- */}
       <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-5 lg:gap-6">
         {/* -------- col 1 ------- */}
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <Link href="/">
             <Logo />
           </Link>
         </div>
 
         {/* -------- col 2 ------- */}
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <Company />
         </div>
 
         {/* -------- col 3 ------- */}
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <Contacts />
         </div>
 
         {/* -------- col 4 ------- */}
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <SocialIcons />
         </div>
 
         {/* -------- col 5 ------- */}
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <NewsLetter />
         </div>
       </div>
