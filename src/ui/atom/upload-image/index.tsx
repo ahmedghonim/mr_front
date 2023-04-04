@@ -1,4 +1,3 @@
- 
 import Image from "next/image";
 import React from "react";
 import DeleteIcon from "@svg/delete.svg";
@@ -15,7 +14,7 @@ function UploadImage({ name = "image" }: Props) {
   function onChange(e: React.FormEvent<HTMLInputElement> | any) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    console.log(reader);
+
     reader.onload = () => {
       setFieldValue(name, reader.result?.toString() as string);
     };

@@ -38,7 +38,6 @@ const services = [
 
 export default function IndexPage() {
   const { t } = useTranslation("common");
-  console.log("servesData >>>> ", servesData);
   return (
     <>
       <Head>

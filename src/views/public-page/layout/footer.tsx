@@ -66,10 +66,8 @@ const Contacts = () => {
           <Location />
         </div>
         <address className="font-Lato font-semibold text-sm">
-          - Egypt: 94 Abdelaziz fahmy st. Saint - fatima square, masr gadeda.
-          <br />
-          -dubai : Nada building, apartment no. 502, Al Barsha first street, Al
-          Barsha1, Dubai
+          - {t("address_eg")}
+          <br />- {t("address_du")}
         </address>
       </div>
       <div className="flex items-center gap-4">
