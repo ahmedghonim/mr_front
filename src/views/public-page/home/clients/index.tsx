@@ -19,7 +19,7 @@ export default function Clients() {
   const clientsImages = [
     "/clients/2.png",
     "/clients/3.jpg",
-    "/clients/4.png",
+    "/clients/4.jpeg",
     "/clients/5.png",
     "/clients/6.jpg",
     "/clients/7.jpg",
