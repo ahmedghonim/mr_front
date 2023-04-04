@@ -17,7 +17,6 @@ export default function Clients() {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const clientsImages = [
-    "/clients/1.png",
     "/clients/2.png",
     "/clients/3.jpg",
     "/clients/4.png",
