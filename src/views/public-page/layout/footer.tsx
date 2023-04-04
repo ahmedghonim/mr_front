@@ -65,7 +65,7 @@ const Contacts = () => {
         <div>
           <Location />
         </div>
-        <address className="font-Lato font-medium text-sm">
+        <address className="font-Lato font-semibold text-sm">
           - Egypt: 94 Abdelaziz fahmy st. Saint - fatima square, masr gadeda.
           <br />
           -dubai : Nada building, apartment no. 502, Al Barsha first street, Al
