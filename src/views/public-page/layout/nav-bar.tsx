@@ -9,10 +9,10 @@ import MenuIcon from "@svg/menu.svg";
 import AboutIcon from "@svg/about-us.svg";
 import OurServesIcon from "@svg/our-serves.svg";
 import FQAIcon from "@svg/fqa.svg";
-
 import LogoIcon from "@svg/logo.svg";
-import ChangeLang from "@views/layout/shared/change-lang";
-import VerticalBar from "@views/layout/shared/vertical-bar";
+import ChangeLang from "@views/shared/change-lang";
+import VerticalBar from "@views/shared/vertical-bar";
+
 function NavBar() {
   const { t } = useTranslation("pages-title");
   const { asPath } = useRouter();

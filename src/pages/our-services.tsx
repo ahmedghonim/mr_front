@@ -1,7 +1,7 @@
 import { LinkButton, Text } from "@ui/atom";
-import IntroSection from "@views/layout/public-page/main-intro-section";
-import ServesView, { ServesViewProps } from "@views/public/our-serves";
-import servesData from "@views/public/our-serves/mockdata";
+import IntroSection from "@views/shared/intro-section";
+import ServesView, { ServesViewProps } from "@views/public-page/our-serves";
+import servesData from "@views/public-page/our-serves/mockdata";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import React from "react";

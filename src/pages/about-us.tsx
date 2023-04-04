@@ -1,10 +1,10 @@
-import IntroSection from "@views/layout/public-page/main-intro-section";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import React from "react";
 import AboutusCover from "@image/aboutus-cover.png";
 import { Text } from "@ui/atom";
-import ContactUs from "@views/layout/public-page/contact-us";
+import ContactUs from "@views/public-page/contact-us";
+import IntroSection from "@views/shared/intro-section";
 
 export default function AboutUs() {
   const { t } = useTranslation("common");

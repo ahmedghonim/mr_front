@@ -1,21 +1,33 @@
 import { Text } from "@ui/atom";
 import useTranslation from "next-translate/useTranslation";
 import React, { useRef } from "react";
-import LinkedIn from "@svg/linkedin-logo.svg";
 import SwiperArrow from "@svg/swiper-arrow.svg";
 
 /* ------- Swiper Imports ------ */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import Image from "next/image";
 
 export default function Clients() {
   const { t } = useTranslation("common");
 
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
-
+  const clientsImages = [
+    "/clients/1.png",
+    "/clients/2.png",
+    "/clients/3.jpg",
+    "/clients/4.png",
+    "/clients/5.png",
+    "/clients/6.jpg",
+    "/clients/7.jpg",
+    "/clients/8.jpeg",
+    "/clients/9.jpeg",
+    "/clients/10.jpeg",
+  ];
   return (
     <div className="lg:px-[120px] px-6 md:pt-[100px] pt-8 md:pb-[126px] pb-[60px]">
       <Text
@@ -29,9 +41,10 @@ export default function Clients() {
       {/* -------- our clients -------- */}
       <div className="relative">
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={50}
           slidesPerView={1.5}
+          autoplay={{ delay: 3000 }}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -40,33 +53,18 @@ export default function Clients() {
             swiper.params.navigation.prevEl = navigationPrevRef.current;
             swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
+          className="!items-center flex"
           breakpoints={{
             768: { slidesPerView: 2.5 },
             992: { slidesPerView: 3.5 },
             1200: { slidesPerView: 5 },
           }}
         >
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LinkedIn />
-          </SwiperSlide>
+          {clientsImages.map((src, index) => (
+            <SwiperSlide key={index}>
+              <Image src={src} width={200} height={200} alt="client" />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <button
           className="absolute top-1/2 -translate-y-1/2 -left-6 rotate-180 hidden lg:block"

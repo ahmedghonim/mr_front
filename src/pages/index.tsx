@@ -1,10 +1,10 @@
-import AboutUS from "@views/layout/public-page/home/about-us";
-import Clients from "@views/layout/public-page/home/clients";
-import HomeIntro from "@views/layout/public-page/home/intro-section";
-import Statistics from "@views/layout/public-page/home/statistics";
-import WhyUs from "@views/layout/public-page/home/why-us";
-import Services from "@views/layout/public-page/services";
-import servesData from "@views/public/our-serves/mockdata";
+import AboutUS from "@views/public-page/home/about-us";
+import Clients from "@views/public-page/home/clients";
+import HomeIntro from "@views/public-page/home/intro-section";
+import Statistics from "@views/public-page/home/statistics";
+import WhyUs from "@views/public-page/home/why-us";
+import servesData from "@views/public-page/our-serves/mockdata";
+import Services from "@views/public-page/services";
 import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const services = [
 
 export default function IndexPage() {
   const { t } = useTranslation("common");
-  console.log('servesData >>>> ', servesData)
+  console.log("servesData >>>> ", servesData);
   return (
     <>
       <Head>

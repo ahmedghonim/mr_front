@@ -1,10 +1,10 @@
 import { Button, Text } from "@ui/atom";
 import HomeCover from "@image/home-cover.png";
 import React from "react";
-import IntroSection from "../../main-intro-section";
 import useTranslation from "next-translate/useTranslation";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
+import IntroSection from "@views/shared/intro-section";
 
 export default function HomeIntro() {
   const { t } = useTranslation("common");

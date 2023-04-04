@@ -5,7 +5,7 @@ import OurServes from "@svg/our-serves.svg";
 import OurClient from "@svg/our-client.svg";
 import Faq from "@svg/fqa.svg";
 import Messages from "@svg/messages.svg";
-import VerticalBar from "../shared/vertical-bar";
+import VerticalBar from "@views/shared/vertical-bar";
 
 function SideBar() {
   const sideBar = [

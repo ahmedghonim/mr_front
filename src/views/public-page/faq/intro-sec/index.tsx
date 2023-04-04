@@ -1,4 +1,4 @@
-import IntroSection from "@views/layout/public-page/main-intro-section";
+import IntroSection from "@views/shared/intro-section";
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import FAQCover from "@image/contact-cover.png";

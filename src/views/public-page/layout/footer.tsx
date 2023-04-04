@@ -58,7 +58,7 @@ const Contacts = () => {
       <div className="flex items-center gap-4 ">
         <Phone />
         <Text font="semi" className="font-Lato">
-          010002427465
+          01093000010
         </Text>
       </div>
       <div className="flex items-center gap-4 my-[10px]">
@@ -66,13 +66,16 @@ const Contacts = () => {
           <Location />
         </div>
         <address className="font-Lato font-medium text-sm">
-          4517 Washington Ave. Manchester, Kentucky 39495
+          - Egypt: 94 Abdelaziz fahmy st. Saint - fatima square, masr gadeda.
+          <br />
+          -dubai : Nada building, apartment no. 502, Al Barsha first street, Al
+          Barsha1, Dubai
         </address>
       </div>
       <div className="flex items-center gap-4">
         <Mail />
         <Text font="semi" className="font-Lato">
-          mohamed@example.com
+          smart77acc@gmail.com
         </Text>
       </div>
     </div>
@@ -93,13 +96,25 @@ const SocialIcons = () => {
       </Text>
 
       <div className="flex items-center gap-5">
-        <Link href="" className="duration-300 hover:scale-125">
+        <Link
+          href="https://www.facebook.com/MRizkEgy1"
+          className="duration-300 hover:scale-125"
+          target="_blank"
+        >
           <Facebook />
         </Link>
-        <Link href="" className="duration-300 hover:scale-125">
+        <Link
+          href="https://www.instagram.com/mohamed.rezkbdah/"
+          className="duration-300 hover:scale-125"
+          target="_blank"
+        >
           <Instagram />
         </Link>
-        <Link href="" className="duration-300 hover:scale-125">
+        <Link
+          href="http://linkedin.com/in/mohamed-rezk-group-7a4876269"
+          target="_blank"
+          className="duration-300 hover:scale-125"
+        >
           <Linkedin />
         </Link>
       </div>
@@ -139,28 +154,33 @@ export default function Footer() {
   return (
     <footer className="lg:px-[124px] px-6 pb-[30px] pt-10 !bg-[#FCF8DB]">
       {/* -------- top section ------- */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
+      <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-5 lg:gap-6">
         {/* -------- col 1 ------- */}
-
-        <Link href="/">
-          <Logo />
-        </Link>
+        <div className="col-span-1">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
 
         {/* -------- col 2 ------- */}
-
-        <Company />
+        <div className="col-span-1">
+          <Company />
+        </div>
 
         {/* -------- col 3 ------- */}
-
-        <Contacts />
+        <div className="col-span-2">
+          <Contacts />
+        </div>
 
         {/* -------- col 4 ------- */}
-
-        <SocialIcons />
+        <div className="col-span-1">
+          <SocialIcons />
+        </div>
 
         {/* -------- col 5 ------- */}
-
-        <NewsLetter />
+        <div className="col-span-1">
+          <NewsLetter />
+        </div>
       </div>
       {/* -------- bottom section ------- */}
       <Text as="p" className="md:mt-[72px] mt-[42px]">{`${t(
