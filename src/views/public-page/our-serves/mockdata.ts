@@ -11,7 +11,7 @@ const servesData = [
   {
     src: "/audit.jpg",
     title_en: "Audit & Assurance",
-    title_ar: "Audit & Assurance",
+    title_ar: "التدقيق والتأكيد",
     desc_en:
       "<ul><li>Our Auditing and Assurance service provides insight on the current state of firms, exploring the legitimacy of firms’ financial statements and providing assurance to investors and capital markets.</li><li>M1 group’s dynamic work environment also supports firms’ bookkeeping process to ensure effective reporting in line with the regulatory framework. We strive to provide rich audit insights and evidence, to streamline firms’ growth plans and ambitions.</li></ul>",
     desc_ar:
