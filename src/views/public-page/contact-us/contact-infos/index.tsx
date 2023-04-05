@@ -2,11 +2,14 @@ import React from "react";
 import useTranslation from "next-translate/useTranslation";
 import Address from "./location";
 import ContactDetails from "./details";
-import Commercial from "@svg/commercial.svg";
 import ContactCircles from "@svg/contact-circles.svg";
-import Instgram from "@svg/contact-instagrm.svg";
-import Twitter from "@svg/twitter.svg";
+import Facebook from "@svg/facebook_w.svg";
+import Linkedin from "@svg/linkedin_w.svg";
+import Instagram from "@svg/instagram_w.svg";
+import Twitter from "@svg/twitter_2_w.svg";
+import Snap from "@svg/snap_w.svg";
 import { Text } from "@ui/atom";
+import Link from "next/link";
 
 function ContactInfo() {
   const { t } = useTranslation("common");
@@ -32,16 +35,18 @@ function ContactInfo() {
     href: string;
   }) => {
     return (
-      <div className="lg:w-[35px] lg:h-[35px] w-[25px] h-[25px] rounded-full bg-white grid place-items-center duration-150 hover:bg-secondary-100 hover:scale-125">
-        <a href={href}>
-          <Icon className="fill-primary-100 lg:scale-90 duration-150 icon" />
-        </a>
-      </div>
+      <Link
+        href={href}
+        target="_blank"
+        className="lg:w-[35px] lg:h-[35px] w-[25px] h-[25px]   grid place-items-center duration-150 hover:bg-secondary-100 hover:scale-125"
+      >
+        <Icon className="fill-white stroke-white lg:scale-90 duration-150 icon" />
+      </Link>
     );
   };
 
   return (
-    <div className="sm:w-[41%] w-full lg:h-[647px] m-2 sm:h-[480px] flex flex-col bg-[#DEBB5F] gap-8 lg:p-10 p-4 rounded-[10px] relative overflow-hidden">
+    <div className="sm:w-[41%] pb-32 lg:h-[647px] m-2 sm:h-[480px] flex flex-col bg-[#DEBB5F] gap-8 lg:p-10 p-4 rounded-[10px] relative overflow-hidden">
       <div className="text-center sm:text-start">
         <Text
           as="h2"
@@ -64,27 +69,28 @@ function ContactInfo() {
         <InfoHead text={t("contact_details")} />
       </ContactDetails>
 
-      <div className="flex gap-1 ">
-        <Commercial className="scale-75" />
-        <div className="flex flex-col gap-1">
-          <InfoHead text={t("commercial_register")} />
-          <Text
-            font="bold"
-            className="!text-start lg:!text-[20px] sm:!text-[12px] !text-[18px] !text-white"
-          >
-            01093000010
-          </Text>
-        </div>
-      </div>
-      <div className="w-full mt-auto flex flex-col gap-6">
+      <div className="w-full flex flex-col gap-6">
         <div className="flex gap-3 ">
           <SocialIcon
-            href="https://mobile.twitter.com/blthanih"
-            icon={Twitter}
+            href="https://www.facebook.com/MRizkEgy1"
+            icon={Facebook}
           />
+
           <SocialIcon
-            href="https://www.instagram.com/blthanih"
-            icon={Instgram}
+            href="https://www.instagram.com/mohamed.rezkbdah/"
+            icon={Instagram}
+          />
+
+          <SocialIcon
+            href="http://linkedin.com/in/mohamed-rezk-group-7a4876269"
+            icon={Linkedin}
+          />
+
+          <SocialIcon href="https://twitter.com/M1_GROUP" icon={Twitter} />
+
+          <SocialIcon
+            href="http://linkedin.com/in/mohamed-rezk-group-7a4876269"
+            icon={Snap}
           />
         </div>
       </div>

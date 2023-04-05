@@ -9,6 +9,8 @@ import Mail from "@svg/mail.svg";
 import Facebook from "@svg/facebook.svg";
 import Linkedin from "@svg/linkedin.svg";
 import Instagram from "@svg/instagram.svg";
+import Twitter from "@svg/twitter_2.svg";
+import Snap from "@svg/snap.svg";
 
 const Company = () => {
   const { t } = useTranslation("common");
@@ -114,6 +116,20 @@ const SocialIcons = () => {
           className="duration-300 hover:scale-125"
         >
           <Linkedin />
+        </Link>
+        <Link
+          href="https://twitter.com/M1_GROUP"
+          target="_blank"
+          className="duration-300 hover:scale-125"
+        >
+          <Twitter />
+        </Link>
+        <Link
+          href="http://linkedin.com/in/mohamed-rezk-group-7a4876269"
+          target="_blank"
+          className="duration-300 hover:scale-125"
+        >
+          <Snap />
         </Link>
       </div>
     </div>
