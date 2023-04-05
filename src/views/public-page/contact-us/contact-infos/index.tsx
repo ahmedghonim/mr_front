@@ -72,7 +72,7 @@ function ContactInfo() {
             font="bold"
             className="!text-start lg:!text-[20px] sm:!text-[12px] !text-[18px] !text-white"
           >
-            1010672966
+            01093000010
           </Text>
         </div>
       </div>
